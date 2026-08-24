@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .wrapper{
+            width: 400px;
+            height: 400px;
+            padding: 40px;
+            background: #1f242d;
+            
+        }
+        h2{
+            color: white;
+        }
+        .input-box input{
+            width: 80%;
+            padding: 10px 10px;
+            border: 1px solid;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        .btn button{
+            width: 15%;
+            padding: 10px;
+            margin: 5px;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+            border: none;
+            /*background: green;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+                <h2>Simple Calculator</h2>
+            <div class="input-box">
+                <input type="number" id="number1" placeholder="Input for the first number">
+            </div>
+            <div class="input-box">
+                <input type="number" id="number2" placeholder="Input for the second number">
+            </div>
+            <div class="btn">
+                <button id="add">+</button>
+                <button id="sub">-</button>
+                <button id="multi">x</button>
+                <button id="div">/</button>
+            </div>
+            <div class="input-box">
+                <input type="number" id="result" readonly>
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript">
+        var num1 = document.getElementById("number1");
+        var num2 = document.getElementById("number2");
+        var result = document.getElementById("result");
+
+        document.getElementById("add").addEventListener
+        ("click", function(){
+            result.value = parseInt(num1.value) + parseInt(num2.value);
+        });
+        document.getElementById("sub").addEventListener
+        ("click", function(){
+            result.value = parseInt(num1.value) - parseInt(num2.value);
+        });
+        document.getElementById("multi").addEventListener
+        ("click", function(){
+            result.value = parseInt(num1.value) * parseInt(num2.value);
+        });
+        document.getElementById("div").addEventListener
+        ("click", function(){
+            result.value = parseInt(num1.value) / parseInt(num2.value);
+        });
+    </script>
+</body>
+</html>
