@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(125deg,#020024, #090979,#00D4FF );
+        }
+        .todo-app{
+            width: 400px;
+            height: 400px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 10px;
+        }
+        .input-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            border-radius: 10px;
+            background: #f1f1f1;
+        }
+        #inputTask{
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+        }
+        .input-box button{
+            padding: 10px 20px;
+            border: none;
+            background: #00D4FF;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        
+        .list-task .task{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 10px;
+           
+        }
+        .list-task .task span{
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+        }
+        .list-task .check-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            border: solid 2px #00D4FF;
+            border-radius: 5px;
+            background: none;
+            
+        }
+        .list-task .check-btn i{
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .list-task .delete-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 100%;
+            background: none;
+        }
+        .list-task .delete-btn i{
+            
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .list-task .delete-btn:hover{
+            background: #ff0000;
+            color: #fff;
+        }
+        .task span{
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+            color: #000;
+        }
+        .task.true .check-btn{
+            background: #00D4FF;
+        }
+        .task.true span{
+            text-decoration: line-through;
+            color: #00D4FF;
+        }
+        .task.true .delete-btn{
+            background: #ff0000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List</h2>
+            <div class="input-box">
+                <input type="text" id="inputTask" placeholder="Add a new task...">
+                <button id="add-task" onclick="addTask()">Add</button>
+            </div>
+            
+            <div class="list-task">
+                <!-- this is where the task will be added -->
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="application/javascript">
+        const listTask = document.querySelector('.list-task');
+        const inputBox = document.getElementById('inputTask');
+
+        function addTask() {
+            if(inputBox.value === ''){
+                alert('Please enter a task');
+
+            }else {
+            const inputTask = document.getElementById('inputTask');
+            //console.log(inputTask.value);
+
+            //this is for the container of the task that will be added to the list
+            const element = 
+                `<div class="task">
+                    <button onclick="checkTask(this)" class="check-btn"><i class="bx bx-check" ></i></button>
+                    <span onclick="checkTask(this)">${inputTask.value}</span>
+                    <button onclick="deleteTask(this)" class="delete-btn"><i class="bx bx-trash" ></i></button>
+                </div>`;
+            listTask.insertAdjacentHTML('afterbegin', element);
+            }
+            
+            inputBox.value = '';
+            saveTask();
+           
+        }
+
+        //function to check the task
+        function checkTask(element){
+            const task = element.parentElement;
+            task.classList.toggle('true');
+            saveTask();
+        }
+
+        //function to delete the task
+        function deleteTask(element){
+            const task = element.parentElement;
+            task.remove();
+            saveTask();
+        }
+        
+        //function to save the task in local storage
+        function saveTask(){
+            localStorage.setItem('data', listTask.innerHTML );
+        }
+
+        //function to show the task from local storage
+        function showTask(){
+            listTask.innerHTML = localStorage.getItem('data');
+        }
+        showTask();
+
+
+    </script>
+</body>
+</html>
