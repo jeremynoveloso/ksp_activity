@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Ilocos Meryenda</h1>
+    <table cellspacing="2" cellpadding="10">
+        <thead>
+            <tr>
+                <th>
+        
+                    <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=600&q=80"
+                    alt="Cupcakes"
+                    width="150" height="150">
+                    
+                  
+                </th>
+                <th>
+                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80"
+                    alt="Cookies"
+                    width="150" height="150">
+                </th>
+                <th>
+                    <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=600&q=80"
+                    alt="Muffins"
+                    width="150" height="150">
+                </th> 
+                
+            </tr>
+
+        </thead>
+        <tbody >
+            <tr>
+                <td> <input type="checkbox" name="order[]" value="cupcakes" /><strong>Cupcakes</strong></td>
+                <td> <input type="checkbox" name="order[]" value="cookies" /><strong>Cookies</strong></td>
+                <td> <input type="checkbox" name="order[]" value="muffins" /><strong>Muffins</strong></td>
+            </tr>
+             <!--<tr>
+                <td>Chocolate Mint, Vanilla Cream, Strawberry, Cookie Dough</td>
+                <td>Butter Cookie, Chocolate Cookie, Choco Sandwich, Jelly Cookie</td>
+                <td>Berry Muffin, Kiwi Muffin, Orange Muffin</td>
+            </tr> -->
+             <tr>
+                <td><p><strong>$5.00</strong></p></td>
+                <td><p><strong>$5.00</strong></p></td>
+                <td><p><strong>$5.00</strong></p></td>
+            </tr>
+            <!---QUANTITY-->
+            <tr>
+                <td>
+                    <label for="cupcake-quantity">Quantity</label>
+                    <input type="number" id="cupcake_number" name="cupcake_number" min="1" max="10">
+                </td>
+                <td>
+                    <label for="cookie-quantity">Quantity</label>
+                    <input type="number" id="cookie_number" name="cookie_number" min="1" max="10">
+                </td>
+                <td>
+                    <label for="muffin-quantity">Quantity</label>
+                    <input type="number" id="muffin_number" name="muffin_number" min="1" max="10">
+                </td>
+            </tr>
+            <!--FLAVOR-->
+            <tr>
+                <td >
+                    <label for="cupcake-flavor">Flavor:</label>
+                    <select id="cupcake-flavor" name="cupcake_flavor">
+                        <option value="chocolate-mint">Chocolate Mint</option>
+                        <option value="vanilla-cream"> Vanilla Cream</option>
+                        <option value="strawberry">Strawberry</option>
+                        <option value="cookie-dough">Cookie Dough</option>
+                    </select>
+                    
+                </td>
+                <td>
+                    <label for="cookie-flavor">Flavor:</label>
+                    <select id="cookie-type" name="cookie_type">
+                        <option value="butter-cookie">Butter Cookie</option>
+                        <option value="chocolate-cookie">Chocolate Cookie</option>
+                        <option value="choco-sandwich"> Choco Sandwich</option>
+                        <option value="jelly-cookie">Jelly Cookie</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="muffin-flavor">Flavor:</label>
+                    <select id="muffin-flavor" name="muffin_flavor">
+                        <option value="berry-muffin">Berry Muffin </option>
+                        <option value="kiwi-muffin"> Kiwi Muffin</option>
+                        <option value="orange-muffin">Orange Muffin</option>
+                    </select>
+                </td>
+            </tr>
+              
+        </tbody>
+    
+        
+    </table>
+
+
+    <!--Second Table-->
+
+    <table cellspacing="2" cellpadding="10">
+        <thead>
+            <tr>
+                <th>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkod9gNP5aM0yYGkj4MCyqyxH_mODnLSv9CAlAWsL2bw&s=10"
+                    width="150" height="150">
+                </th>
+                <th>
+                    <img src="https://www.foodandwine.com/thmb/XE8ubzwObCIgMw7qJ9CsqUZocNM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/MSG-Smash-Burger-FT-RECIPE0124-d9682401f3554ef683e24311abdf342b.jpg"
+                    width="150" height="150">
+                </th>
+                <th>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq5Z9WnHYcxERFwgXbRfQYWIU2AvQG5IAHZl9huMT_0A&s=10"
+                    width="150" height="150">
+                </th> 
+                
+            </tr>
+
+        </thead>
+        <tbody >
+            <tr>
+                <td> <input type="checkbox" name="order[]" value="pizza" /><strong>Pizza</strong></td>
+                <td> <input type="checkbox" name="order[]" value="burger" /><strong>Burger</strong></td>
+                <td> <input type="checkbox" name="order[]" value="beverages" /><strong>Beverages</strong></td>
+            </tr>
+             <!--<tr>
+                <td>Chocolate Mint, Vanilla Cream, Strawberry, Cookie Dough</td>
+                <td>Butter Cookie, Chocolate Cookie, Choco Sandwich, Jelly Cookie</td>
+                <td>Berry Muffin, Kiwi Muffin, Orange Muffin</td>
+            </tr> -->
+             <tr>
+                <td><p><strong>$5.00</strong></p></td>
+                <td><p><strong>$5.00</strong></p></td>
+                <td><p><strong>$5.00</strong></p></td>
+            </tr>
+            <!--QUANTITY-->
+            <tr>
+                <td>
+                    <label for="pizza-quantity">Quantity</label>
+                    <input type="number" id="pizza_number" name="pizza_number" min="1" max="10">
+                </td>
+                <td>
+                    <label for="burger-quantity">Quantity</label>
+                    <input type="number" id="burger_number" name="burger_number" min="1" max="10">
+                </td>
+                <td>
+                    <label for="beverages-quantity">Quantity</label>
+                    <input type="number" id="beverages_number" name="beverages_number" min="1" max="10">
+                </td>
+            </tr>
+            <!--FLAVOR-->
+            <tr>
+                <td >
+                    <label for="pizza-flavor">Flavor:</label>
+                    <select id="pizza-flavor" name="pizza_flavor">
+                        <option value="garlic-cheese">Grlic Cheese</option>
+                        <option value="hawaiian"> Hawaiian</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="bolognese">Bolognese</option>
+                    </select>
+                    
+                </td>
+                <td>
+                    <label for="burger-flavor">Flavor:</label>
+                    <select id="burger-flavor" name="burger-flavor">
+                        <option value="cheese-burger">Cheese Burger</option>
+                        <option value="bacon-cheese">Bacon w/Cheese</option>
+                        <option value="ham-egg"> Ham and Egg</option>
+                        <option value="chili-cheese">Chili Cheese</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="beverages-flavor">Flavor:</label>
+                    <select id="beverages-flavor" name="beverages_flavor">
+                        <option value="iced_tea">Ice Tea </option>
+                        <option value="lemonade"> Lemonade</option>
+                        <option value="soda">Soda</option>
+                    </select>
+                </td>
+            </tr>    
+        </tbody>
+    
+        
+    </table>
+    <br/>
+    <br/>
+    <br/>
+   <button type="submit">CLICK HERE TO SUBMIT YOUR ORDER</button>
+</body>
+</html>
